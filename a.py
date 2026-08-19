@@ -8,6 +8,8 @@ import urllib.request
 URL = "https://raw.githubusercontent.com/atomixrehan/localconfig/refs/heads/main/localconfig.json"
 # -------------------
 
+import subprocess
+
 PACKAGE = "com.dts.freefireth"
 REMOTE_DIR = f"/sdcard/Android/data/{PACKAGE}/files"
 
@@ -21,7 +23,6 @@ if f"package:{PACKAGE}" in result.stdout:
     print("Connected to FreeFire")
 else:
     print("FreeFire is not installed")
-
 
 import time
 
