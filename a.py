@@ -1,18 +1,4 @@
 #!/usr/bin/env python3
-"""
-Dead-simple version: hardcode the URL below, run the script, pick 1 or 2.
-
-  1) Activate   -> downloads URL, pushes it into
-                   /sdcard/Android/data/com.dts.freefireth/files/
-  2) Deactivate -> deletes localconfig.json from that same folder on the phone
-
-Requires: adb installed and your phone connected (USB debugging on, or
-already `adb connect`-ed over wireless debugging).
-
-    pkg install android-tools     (Termux)
-    apt install android-tools-adb (Linux)
-"""
-
 import os
 import subprocess
 import tempfile
