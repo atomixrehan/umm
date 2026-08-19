@@ -17,7 +17,7 @@ result = subprocess.run(
     text=True
 )
 
-if package_name in result.stdout:
+if PACKAGE in result.stdout:
     print("Connected to FreeFire")
 else:
     print("FreeFire is not installed")
