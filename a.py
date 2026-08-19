@@ -11,6 +11,17 @@ URL = "https://raw.githubusercontent.com/atomixrehan/localconfig/refs/heads/main
 PACKAGE = "com.dts.freefireth"
 REMOTE_DIR = f"/sdcard/Android/data/{PACKAGE}/files"
 
+result = subprocess.run(
+    ["adb", "shell", "pm", "list", "packages", PACKAGE],
+    capture_output=True,
+    text=True
+)
+
+if package_name in result.stdout:
+    print("Connected to FreeFire")
+else:
+    print("FreeFire is not installed")
+
 
 import time
 
@@ -59,12 +70,12 @@ def main():
                 f"{REMOTE_DIR}/localconfig.json"
             ])
 
-            print("localconfig.json deleted.")
+            print("Bypass Activated")
 
         else:
             print(
-                "adb push failed — is the phone connected? "
-                "Run `adb devices` to check."
+                "execution failed"
+                "Make Sure Shizuku Is Running"
             )
 
 
